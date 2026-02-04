@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #ff9a9e 0%, #fad0c4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.header-content h2 {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #ecf0f1;
+}
+
+/* Main Content */
+main {
+    background: white;
+    margin: 2rem auto;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #3498db;
+    display: inline-block;
+}
+
+/* About Me Section */
+.about-me {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.profile-photo {
+    flex: 0 0 200px;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #3498db;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.profile-photo img:hover {
+    transform: scale(1.05);
+}
+
+.personal-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* API Endpoints */
+.api-endpoints {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 5px solid #3498db;
+}
+
+.api-list {
+    list-style-type: none;
+}
+
+.api-list li {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.api-list li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #2ecc71;
+}
+
+.api-list strong {
+    color: #3498db;
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+/* Project Description */
+.project-description {
+    background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    border-top: 5px solid #3498db;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .header-content h2 {
+        font-size: 1.1rem;
+    }
+    
+    main {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .profile-photo {
+        flex: 0 0 150px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    section {
+        padding: 1rem;
+    }
+    
+    .api-endpoints {
+        padding: 1rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Hover Effects */
+.api-list li:hover strong {
+    color: #2ecc71;
+}
+
+/* Typography Enhancements */
+p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+h3 {
+    color: #34495e;
+    margin: 1.5rem 0 1rem 0;
+}
+
+/* Code styling */
+code {
+    background: #f1f1f1;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: #c03d2f;
+}
